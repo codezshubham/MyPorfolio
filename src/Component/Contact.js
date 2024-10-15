@@ -6,6 +6,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [isButtonClicked, setIsButtonClicked] = useState(false); // For button animation
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,12 +14,16 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
+    // Button click animation
+    setIsButtonClicked(true);
+    setTimeout(() => setIsButtonClicked(false), 200);
+
     // Form validation: check if all fields are filled
     if (!formData.name || !formData.email || !formData.message) {
       setError('Please fill out all fields before submitting.');
       setTimeout(() => {
-        setError(''); 
+        setError('');
       }, 5000);
       return;
     }
@@ -39,8 +44,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log('Email sent successfully:', result.text);
-          setIsSubmitted(true); 
-          // Reset form fields after submission
+          setIsSubmitted(true);
           setFormData({ name: '', email: '', message: '' });
 
           setTimeout(() => {
@@ -72,20 +76,20 @@ const Contact = () => {
           </p>
 
           <div className="space-y-6 text-lg text-gray-300">
-              <div className="flex items-center space-x-4">
-                <span><i className="fas fa-envelope text-purple-400"></i></span>
-                <span className='break-all'>kumarshubhamgupta478@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <span><i className="fas fa-phone text-purple-400"></i></span>
-                <span>+91 705-096-9489</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <span><i className="fas fa-map-marker-alt text-purple-400"></i></span>
-                <span>Bihar, India</span>
-              </div>
-              <Contact2/>
+            <div className="flex items-center space-x-4">
+              <span><i className="fas fa-envelope text-purple-400"></i></span>
+              <span className='break-all'>kumarshubhamgupta478@gmail.com</span>
             </div>
+            <div className="flex items-center space-x-4">
+              <span><i className="fas fa-phone text-purple-400"></i></span>
+              <span>+91 705-096-9489</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span><i className="fas fa-map-marker-alt text-purple-400"></i></span>
+              <span>Bihar, India</span>
+            </div>
+            <Contact2/>
+          </div>
         </div>
 
         <div className="md:w-1/2">
@@ -134,12 +138,14 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full p-3 mt-4 rounded-lg bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-300"
+              className={`w-full p-3 mt-4 rounded-lg bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-300 ${
+                isButtonClicked ? 'transform scale-95' : 'transform scale-100'
+              }`}
             >
               Submit Now
             </button>
           </form>
-          
+
           {/* Displaying Success/Failure Message */}
           {isSubmitted && <p className="text-green-500 mt-4">Message sent successfully!</p>}
           {error && <p className="text-red-500 mt-4">{error}</p>}

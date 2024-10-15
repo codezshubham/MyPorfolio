@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Experience = () => {
+  const [isCertificateClicked, setIsCertificateClicked] = useState(false);
+
+  const handleCertificateClick = (e) => {
+    e.preventDefault();
+    setIsCertificateClicked(true);
+    setTimeout(() => {
+      setIsCertificateClicked(false);
+      // Open certificate PDF in a new tab
+      window.open('/SalesforceCertificate.pdf', '_blank');
+    }, 200); // Delay for animation
+  };
+
   return (
     <section id="experience" className="bg-gray-900 text-white py-12 px-4">
       <div className="container mx-auto">
@@ -27,19 +39,19 @@ const Experience = () => {
               <span className="inline-block text-red-400">✅ REST API</span>
             </div>
 
-            {/* Certificate Link */}
+            {/* Certificate Link with Click Animation */}
             <div className="mt-4">
               <a 
                 href="/SalesforceCertificate.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-300 py-2 px-4 rounded-full">
+                onClick={handleCertificateClick}
+                className={`inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-300 py-2 px-4 rounded-full ${
+                  isCertificateClicked ? 'transform scale-95' : 'transform scale-100'
+                }`}
+              >
                 View Certificate
               </a>
             </div>
           </div>
-
-          {/* Add more experiences here if needed */}
           
         </div>
       </div>

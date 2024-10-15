@@ -1,7 +1,30 @@
-import React from 'react';
-import image from '../Assest/profpic3.jpg'
+import React, { useState } from 'react';
+import image from '../Assest/profpic3.jpg';
 
 const About = () => {
+  const [isGithubClicked, setIsGithubClicked] = useState(false);
+  const [isLinkedinClicked, setIsLinkedinClicked] = useState(false);
+
+  const handleGithubClick = (e) => {
+    e.preventDefault();
+    setIsGithubClicked(true);
+    setTimeout(() => {
+      setIsGithubClicked(false);
+      // Navigate to GitHub
+      window.open('https://github.com/codezshubham', '_blank');
+    }, 200); // Allow time for animation
+  };
+
+  const handleLinkedinClick = (e) => {
+    e.preventDefault();
+    setIsLinkedinClicked(true);
+    setTimeout(() => {
+      setIsLinkedinClicked(false);
+      // Navigate to LinkedIn
+      window.open('https://www.linkedin.com/in/shubhamkumar441/', '_blank');
+    }, 200); // Allow time for animation
+  };
+
   return (
     <section className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:space-x-12">
@@ -15,9 +38,7 @@ const About = () => {
         </div>
         {/* About Content */}
         <div className="text-left">
-          <h1 className="text-3xl font-bold text-white mb-4">
-            I am Shubham Kumar
-          </h1>
+          <h1 className="text-3xl font-bold text-white mb-4">I am Shubham Kumar</h1>
           <ul className="list-disc ml-5 space-y-2 mb-4">
             <li>
               Completing my graduation from BPMCE Madhepura with a Bachelor of Technology in Computer Science & Technology.
@@ -26,9 +47,9 @@ const About = () => {
               Worked on various projects as a Full Stack Developer with a focus on 60% backend and 40% frontend development.
             </li>
             <li>
-            My portfolio boasts an extensive expertise in data structures and algorithms, object-oriented programming, 
-            functional programming, RESTful APIs, problem-solving prowess, proficient programming skills, 
-            effective leadership qualities, effective communication skills and comprehensive software development proficiency.
+              My portfolio boasts an extensive expertise in data structures and algorithms, object-oriented programming,
+              functional programming, RESTful APIs, problem-solving prowess, proficient programming skills,
+              effective leadership qualities, effective communication skills and comprehensive software development proficiency.
             </li>
           </ul>
 
@@ -51,19 +72,23 @@ const About = () => {
             </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links with Animation */}
           <div className="mt-6">
             <a
               href="https://github.com/codezshubham"
-              target="_blank"
-              className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-300 px-4 py-2 rounded-md mr-4"
+              onClick={handleGithubClick}
+              className={`inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-200 px-4 py-2 rounded-md mr-4 ${
+                isGithubClicked ? 'transform scale-95' : 'transform scale-100'
+              }`}
             >
               GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/shubhamkumar441/"
-              target="_blank"
-              className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-300 px-4 py-2 rounded-md"
+              onClick={handleLinkedinClick}
+              className={`inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-200 px-4 py-2 rounded-md ${
+                isLinkedinClicked ? 'transform scale-95' : 'transform scale-100'
+              }`}
             >
               LinkedIn
             </a>
