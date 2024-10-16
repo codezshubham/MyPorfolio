@@ -41,13 +41,13 @@ const About = () => {
           <h1 className="text-3xl font-bold text-white mb-4">I am Shubham Kumar</h1>
           <ul className="list-disc ml-5 space-y-2 mb-4">
             <li>
-              Completing my graduation from BPMCE Madhepura with a Bachelor of Technology in Computer Science & Technology.
+              Completing my graduation from BPMCE Madhepura with a Bachelor of Technology in Computer Science & Engineering.
             </li>
             <li>
-              Worked on various projects as a Full Stack Developer with a focus on 60% backend and 40% frontend development.
+              Worked on various projects as a Full Stack Developer with a 60% backend and 40% frontend development bandwidth.
             </li>
             <li>
-              My portfolio boasts an extensive expertise in data structures and algorithms, object-oriented programming,
+              My portfolio boasts extensive expertise in data structures and algorithms, object-oriented programming,
               functional programming, RESTful APIs, problem-solving prowess, proficient programming skills,
               effective leadership qualities, effective communication skills and comprehensive software development proficiency.
             </li>
@@ -57,20 +57,41 @@ const About = () => {
           <h3 className="text-lg text-white font-semibold mb-2">
             My Preferred Tools and Technologies are <span className="emoji">👇</span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
             <ul className="space-y-2">
-              <li>✅ Java, Spring-Boot, Spring Data-JPA, Spring-Rest</li>
-              <li>✅ DS & Algo, Oops, Computer Networks</li>
+              <li className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span>Java, Spring-Boot, Spring Data-JPA, Spring-Rest</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span>DS & Algo, Oops, Computer Networks</span>
+              </li>
             </ul>
+            
             <ul className="space-y-2">
-              <li>✅ Javascript, ReactJS, Redux-Toolkit, Tailwind CSS</li>
-              <li>✅ Git, Github, Maven, Postman, Intellij Idea</li>
+              <li className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span>Javascript, ReactJS, Redux-Toolkit, Tailwind CSS</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span>Git, Github, Maven, Postman, IntelliJ Idea</span>
+              </li>
             </ul>
+
             <ul className="space-y-2">
-              <li>✅ SQL, MySQL, MySQL Workbench Server</li>
-              <li>✅ AWS (EC2 instance & S3 bucket, Amplify)</li>
+              <li className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span>SQL, MySQL, MySQL Workbench Server</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span>AWS (EC2 instance & S3 bucket, Amplify)</span>
+              </li>
             </ul>
           </div>
+
 
           {/* Social Links with Animation */}
           <div className="mt-6">

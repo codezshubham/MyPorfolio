@@ -26,14 +26,13 @@ const Home = () => {
         <h1 className="text-5xl font-bold">Shubham Kumar</h1>
         <p className="text-red-500 text-xl font-semibold">Software Engineer / Full Stack Developer</p>
         <p className="text-gray-300 text-lg text-wrap max-w-5xl">
-          Aspiring <span className="font-bold">Full-Stack developer</span> with hands-on experience in building web
-          applications and solving real-world problems. Passionate about
-          <span className="font-bold"> learning new tools and technologies</span> and eager to contribute to dynamic
+          An Aspiring <span className="font-bold">Full-Stack developer</span> with hands-on experience building web
+          applications and solving real-world problems. Passionate about<span className="font-bold"> learning new tools and technologies</span> and eager to contribute to dynamic
           projects in the tech industry.
         </p>
         <p className="text-gray-400">
-          Currently, I am working with <span className="font-bold">ReactJS</span>,{' '}
-          <span className="font-bold">Spring Boot (Java)</span> to build full-stack applications.
+          Currently, I am working with <span className="font-bold">ReactJS</span> and 
+          <span className="font-bold"> Spring Boot (Java)</span> to build full-stack applications.
         </p>
         <div className="flex flex-wrap justify-center items-center space-x-6">
           <a

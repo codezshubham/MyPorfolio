@@ -29,15 +29,37 @@ const Experience = () => {
               <li>Collaborated with cross-functional teams to implement new CRM features, troubleshoot production issues, and improve data analysis with Reports and Dashboards.</li>
             </ul>
 
-            <div className="flex flex-wrap space-x-4 mb-4 text-sm mt-4">
-              <span className="inline-block text-red-400">✅ Salesforce Lightning</span>
-              <span className="inline-block text-red-400">✅ Apex</span>
-              <span className="inline-block text-red-400">✅ Visualforce</span>
-              <span className="inline-block text-red-400">✅ SOQL</span>
-              <span className="inline-block text-red-400">✅ JavaScript</span>
-              <span className="inline-block text-red-400">✅ HTML/CSS</span>
-              <span className="inline-block text-red-400">✅ REST API</span>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 text-sm mt-4">
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">Salesforce Lightning</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">Apex</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">Visualforce</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">SOQL</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">JavaScript</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">HTML/CSS</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">REST API</span>
+              </div>
             </div>
+
 
             {/* Certificate Link with Click Animation */}
             <div className="mt-4">

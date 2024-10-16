@@ -46,13 +46,41 @@ const Project = () => {
             </ul>
 
             {/* Technologies */}
-            <div className="flex flex-wrap space-x-4 mb-4 text-sm">
-              <span className="inline-block text-red-400">✅ ReactJs</span>
-              <span className="inline-block text-red-400">✅ JavaScript</span>
-              <span className="inline-block text-red-400">✅ SpringBoot</span>
-              <span className="inline-block text-red-400">✅ Java</span>
-              <span className="inline-block text-red-400">✅ Tailwind CSS</span>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4 text-sm">
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">HTML</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">Tailwind CSS</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">Javascript</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">React</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">React-Redux</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">Java</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">SpringBoot</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-red-400">✅</span>
+                <span className="text-red-400">MySQL</span>
+              </div>
             </div>
+
 
             {/* Project Link with Click Animation */}
             <a
