@@ -45,7 +45,7 @@ This portfolio showcases my journey as a Full-Stack Developer, featuring my proj
 
 ## 📸 Screenshots
 
-
+![Homepage Screenshot](./assets/homepage1.png)
 
 ---
 
