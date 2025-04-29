@@ -45,7 +45,7 @@ This portfolio showcases my journey as a Full-Stack Developer, featuring my proj
 
 ## 📸 Screenshots
 
-*Feel free to add screenshots here of your homepage, projects, or contact page for visual appeal.*
+
 
 ---
 
