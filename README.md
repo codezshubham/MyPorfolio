@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# 💼 Shubham Kumar — Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the official repository of my personal portfolio website!  
+Check it out live 👉 [www.shubhamkumar.xyz](https://www.shubhamkumar.xyz)
 
-## Available Scripts
+This portfolio showcases my journey as a Full-Stack Developer, featuring my projects, skills, experience, certifications, and ways to get in touch.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌐 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔗 [www.shubhamkumar.xyz](https://www.shubhamkumar.xyz)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Frontend:**
+- React.js
+- Tailwind CSS
+- JavaScript
+- HTML5
 
-### `npm run build`
+**Backend:**
+- Spring Boot (for APIs & auth)
+- Java
+- MySQL (for data persistence)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Additional Integrations:**
+- JWT for Authentication
+- EmailJS for contact form handling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Features
 
-### `npm run eject`
+- 📌 About Me section
+- 🛠️ Projects with details and tech stack
+- 📄 Resume and certification highlights
+- 📬 Contact form (with email integration)
+- ⚙️ Fully responsive across devices
+- 🔒 Secure with JWT-based authentication (in admin dashboard if applicable)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📸 Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Homepage Screenshot](./assets/homepage1.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🧑‍💻 Getting Started (For Developers)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you’d like to clone this project and run it locally:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio-website.git
 
-### Code Splitting
+# Navigate into the project directory
+cd portfolio-website
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Install dependencies
+npm install
 
-### Analyzing the Bundle Size
+# Start the development server
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📫 Contact
+If you’d like to connect or collaborate, reach out via:
+📧 shubhamofficial0022@gmail.com
+🌐 LinkedIn
+🐱 GitHub
 
-### Making a Progressive Web App
+⭐️ Show Your Support
+If you found this project helpful or inspiring, feel free to give it a ⭐ on GitHub — it helps a lot!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+📃 License
+This project is licensed under the MIT License.
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you’d like to add badges (like GitHub stars, fork, Netlify/Vercel deployment status, etc.) or a
