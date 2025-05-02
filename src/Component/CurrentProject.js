@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import projectImg from '../Assest/CurrentProject.png';
+import projectImg from '../Assest/Screenshot 2025-05-02 202906.png';
 
 const CurrentProject = () => {
   const [isProjectLinkClicked, setIsProjectLinkClicked] = useState(false);
@@ -10,7 +10,7 @@ const CurrentProject = () => {
     setTimeout(() => {
       setIsProjectLinkClicked(false);
       // Navigate to project URL
-      window.open('/', '_blank');
+      window.open('https://acad-elevate.vercel.app/', '_blank');
     }, 200); // Allow time for animation
   };
 
@@ -81,7 +81,7 @@ const CurrentProject = () => {
 
             {/* Project Link with Click Animation */}
             <a
-              href="/"
+              href="https://acad-elevate.vercel.app/"
               onClick={handleProjectLinkClick}
               className={`inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-300 px-4 py-2 rounded-md ${
                 isProjectLinkClicked ? 'transform scale-95' : 'transform scale-100'

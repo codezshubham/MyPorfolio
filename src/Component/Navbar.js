@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-950 p-4 sticky top-0 z-50 shadow-md">
+    <nav className="bg-gray-950 p-6 sticky top-0 z-50 shadow-md">
       <div className="w-full h-3 container mx-auto flex justify-between items-center pl-6">
         {/* Profile Image */}
         <div className="flex-shrink-0">

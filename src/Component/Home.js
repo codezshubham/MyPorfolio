@@ -1,8 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Home = () => {
+  const fullText = 'H i 👋, I am Shubham Kumar';
+  const [typedText, setTypedText] = useState('');
   const [isContactClicked, setIsContactClicked] = useState(false);
   const [isResumeClicked, setIsResumeClicked] = useState(false);
+
+  const indexRef = useRef(0);
+  const fullTextRef = useRef(fullText); // Avoid reinitializing
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (indexRef.current < fullTextRef.current.length) {
+        setTypedText((prev) => prev + fullTextRef.current.charAt(indexRef.current));
+        indexRef.current += 1;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleContactClick = () => {
     setIsContactClicked(true);
@@ -14,20 +32,21 @@ const Home = () => {
     setIsResumeClicked(true);
     setTimeout(() => {
       setIsResumeClicked(false);
-      // After the animation, navigate to the resume link
       window.open('/ShubhamKumar.pdf', '_blank', 'noopener,noreferrer');
-    }, 400);  // Delay the navigation for 400ms
+    }, 400);
   };
 
   return (
-    <div className="bg-gray-900 text-white flex items-center justify-center">
+    <div className="bg-gray-900 text-white flex items-center justify-center min-h-screen">
       <div className="text-center space-y-4">
-        <p className="text-lg mt-10">Hi 👋, I am</p>
-        <h1 className="text-5xl font-bold">Shubham Kumar</h1>
+        <p className="text-3xl md:text-5xl md:mt-0 font-mono min-h-[1.5rem]">
+          {typedText}
+          <span className="animate-pulse">|</span>
+        </p>
         <p className="text-red-500 text-xl font-semibold">Software Engineer / Full Stack Developer</p>
-        <p className="text-gray-300 text-lg text-wrap max-w-5xl">
+        <p className="text-gray-300 text-lg max-w-5xl mx-auto">
           An Aspiring <span className="font-bold">Full-Stack developer</span> with hands-on experience building web
-          applications and solving real-world problems. Passionate about<span className="font-bold"> learning new tools and technologies</span> and eager to contribute to dynamic
+          applications and solving real-world problems. Passionate about <span className="font-bold">learning new tools and technologies</span> and eager to contribute to dynamic
           projects in the tech industry.
         </p>
         <p className="text-gray-400">
@@ -51,7 +70,7 @@ const Home = () => {
             className={`items-center inline-block text-sm md:text-base px-6 py-3 rounded-full mt-4 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-200 ${
               isResumeClicked ? 'transform scale-95' : 'transform scale-100'
             }`}
-            onClick={handleResumeClick}  
+            onClick={handleResumeClick}
           >
             My Resume
           </a>
