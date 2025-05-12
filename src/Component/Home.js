@@ -32,7 +32,7 @@ const Home = () => {
     setIsResumeClicked(true);
     setTimeout(() => {
       setIsResumeClicked(false);
-      window.open('/ShubhamKumar.pdf', '_blank', 'noopener,noreferrer');
+      window.open('/Shubham_Kumar_Resume_Software_Engineer.pdf', '_blank', 'noopener,noreferrer');
     }, 400);
   };
 
@@ -64,7 +64,7 @@ const Home = () => {
             Contact Me
           </a>
           <a
-            href="/ShubhamKumar.pdf"
+            href="/Shubham_Kumar_Resume_Software_Engineer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={`items-center inline-block text-sm md:text-base px-6 py-3 rounded-full mt-4 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-200 ${
