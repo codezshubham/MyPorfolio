@@ -10,6 +10,7 @@ import Experience from './Component/Experience';
 import CurrentProject from './Component/CurrentProject';
 import Project1 from './Component/Project1';
 import Project2 from './Component/Project2';
+import Project3 from './Component/Project3';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
               <Project1/>
               <Project />
               <Project2/>
+              <Project3/>
             </section>
 
             <section id="contact">
