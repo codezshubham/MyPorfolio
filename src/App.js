@@ -12,6 +12,8 @@ import CurrentProject from './Component/CurrentProject';
 import Project1 from './Component/Project1';
 import Project2 from './Component/Project2';
 import Project3 from './Component/Project3';
+import CoursesCarousel from './Component/Courses';
+import CodingProfiles from './Component/CodingProfile';
 
 function App() {
   return (
@@ -33,13 +35,21 @@ function App() {
             <section id="experience">
               <Experience />
             </section>
-          
+            
+            <section id="coding">
+              <CodingProfiles />
+            </section>
+            
             <section id="projects">
               <CurrentProject />
               <Project1/>
               <Project />
               <Project2/>
               <Project3/>
+            </section>
+
+            <section id="certifications">
+              <CoursesCarousel />
             </section>
 
             <section id="contact">

@@ -9,14 +9,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-950 p-6 sticky top-0 z-50 shadow-md">
+    <nav className="bg-gray-950 p-5 sticky top-0 z-50 shadow-md">
       <div className="w-full h-3 container mx-auto flex justify-between items-center pl-6">
         {/* Profile Image */}
         <div className="flex-shrink-0">
           <img
             src={image}
             alt="Profile"
-            className="rounded-full w-8 h-8 object-cover"
+            className="w-10 h-10 rounded-full border-2 border-rose-500 shadow-md"
           />
         </div>
 
@@ -32,7 +32,13 @@ const Navbar = () => {
             <a href="#experience">Experiences</a>
           </li>
           <li className="hover:text-white hover:border-b-2">
+            <a href="#coding">Coding Profile</a>
+          </li>
+          <li className="hover:text-white hover:border-b-2">
             <a href="#projects">Projects</a>
+          </li>
+          <li className="hover:text-white hover:border-b-2">
+            <a href="#certifications">Certifications</a>
           </li>
           <li className="hover:text-white hover:border-b-2">
             <a href="#contact">Contact</a>
@@ -95,7 +101,13 @@ const Navbar = () => {
               <a href="#experience" onClick={toggleMenu}>Experiences</a>
             </li>
             <li className="hover:text-gray-400">
+              <a href="#coding" onClick={toggleMenu}>Coding Profile</a>
+            </li>
+            <li className="hover:text-gray-400">
               <a href="#projects" onClick={toggleMenu}>Projects</a>
+            </li>
+            <li className="hover:text-gray-400">
+              <a href="#certifications" onClick={toggleMenu}>Certifications</a>
             </li>
             <li className="hover:text-gray-400">
               <a href="#contact" onClick={toggleMenu}>Contact</a>
