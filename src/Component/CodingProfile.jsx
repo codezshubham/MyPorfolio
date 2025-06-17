@@ -20,7 +20,7 @@ const profiles = [
 
 export default function CodingProfiles() {
   return (
-    <section className="py-20 bg-gray-100 dark:bg-gray-900" id="coding">
+    <section className="py-20 bg-gray-900" id="coding">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-4xl font-semibold mb-8 text-start text-white">
           Coding Profiles
@@ -30,18 +30,18 @@ export default function CodingProfiles() {
           {profiles.map((profile, index) => (
             <div
               key={index}
-              className="relative bg-white dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-80 rounded-2xl p-6 shadow-lg backdrop-blur-md border border-gray-200 dark:border-gray-700 hover:border-blue-500 transition-all duration-300 group"
+              className="relative bg-gray-800 bg-opacity-80 rounded-2xl p-6 shadow-lg backdrop-blur-md border border-gray-700 hover:border-blue-500 transition-all duration-300 group"
             >
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-white dark:bg-gray-700 shadow-inner border">
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-700 shadow-inner border">
                   {profile.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-semibold text-white">
                     {profile.name}
                   </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">@{profile.username}</p>
-                  <span className="inline-block mt-2 text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 rounded-full font-semibold">
+                  <p className="text-sm text-gray-400">@{profile.username}</p>
+                  <span className="inline-block mt-2 text-xs px-3 py-1 bg-blue-900 text-blue-300 rounded-full font-semibold">
                     {profile.stats}
                   </span>
                 </div>
@@ -52,7 +52,7 @@ export default function CodingProfiles() {
                   href={profile.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-sm font-medium text-blue-600 dark:text-blue-400 border border-blue-500 px-4 py-1.5 rounded-lg hover:bg-blue-500 hover:text-white transition"
+                  className="inline-block text-sm font-medium text-blue-400 border border-blue-500 px-4 py-1.5 rounded-lg hover:bg-blue-500 hover:text-white transition"
                 >
                   Visit Profile
                 </a>

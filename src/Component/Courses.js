@@ -62,7 +62,7 @@ export default function CoursesCarousel() {
   return (
     <section
       id="certifications"
-      className="px-6 py-20 bg-gradient-to-br from-gray-100 to-white dark:from-gray-900 dark:to-gray-800"
+      className="px-6 py-20 bg-gray-900"
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-semibold mb-8 text-start text-white">
@@ -80,10 +80,10 @@ export default function CoursesCarousel() {
         >
           {courses.map((course, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white/30 dark:bg-gray-800/60 backdrop-blur-md border border-gray-200 dark:border-gray-700 rounded-3xl shadow-2xl overflow-hidden mx-auto max-w-2xl transform transition duration-300 hover:scale-[1.01] hover:shadow-blue-200 dark:hover:shadow-blue-800/30">
+              <div className=" bg-gray-800/60 backdrop-blur-md border border-gray-700 rounded-3xl overflow-hidden mx-auto max-w-2xl transform transition duration-300">
                 
                 {/* Certificate Image */}
-                <div className="bg-gray-100 dark:bg-gray-700 aspect-[16/11] flex items-center justify-center">
+                <div className="bg-gray-700 aspect-[16/11] flex items-center justify-center">
                   <img
                     src={course.image}
                     alt={course.title}
@@ -93,13 +93,13 @@ export default function CoursesCarousel() {
 
                 {/* Course Details */}
                 <div className="p-8 text-center">
-                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">
+                  <h3 className="text-2xl font-semibold text-white mb-2">
                     {course.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                  <p className="text-sm text-gray-300 mb-1">
                     {course.provider}
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                  <p className="text-sm text-gray-400 mb-4">
                     {course.date}
                   </p>
 
