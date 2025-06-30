@@ -1,5 +1,5 @@
 import React from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 import Navbar from './Component/Navbar';
 import Home from './Component/Home';
 import About from './Component/About';
@@ -14,6 +14,7 @@ import Project2 from './Component/Project2';
 import Project3 from './Component/Project3';
 import CoursesCarousel from './Component/Courses';
 import CodingProfiles from './Component/CodingProfile';
+import Project4 from './Component/Project4';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             
             <section id="projects">
               <CurrentProject />
+              <Project4/>
               <Project1/>
               <Project />
               <Project2/>

@@ -65,7 +65,7 @@ export default function CoursesCarousel() {
       className="px-6 py-20 bg-gray-900"
     >
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-8 text-start text-white">
+        <h2 className="text-4xl font-semibold mb-8 text-center text-white">
           Courses & Certifications
         </h2>
 
