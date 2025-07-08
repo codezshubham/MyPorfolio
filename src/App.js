@@ -15,12 +15,13 @@ import Project3 from './Component/Project3';
 import CoursesCarousel from './Component/Courses';
 import CodingProfiles from './Component/CodingProfile';
 import Project4 from './Component/Project4';
+import FullStackIntern from './Component/FullStackIntern';
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-900 flex flex-col justify-center px-4">
+      <div className="bg-gray-900 flex flex-col justify-center px-4 py-20">
             <section id="home">
               <Home />
             </section>
@@ -35,6 +36,7 @@ function App() {
 
             <section id="experience">
               <Experience />
+              <FullStackIntern />
             </section>
             
             <section id="coding">

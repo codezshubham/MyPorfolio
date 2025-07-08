@@ -26,7 +26,7 @@ const About = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-gray-300 py-12">
+    <section className="bg-gray-900 text-gray-300 py-12 px-6">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:space-x-12">
         {/* Profile Image */}
         <div className="flex-shrink-0 mb-8 md:mb-0">
