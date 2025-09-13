@@ -1,123 +1,89 @@
-import React, { useState } from 'react';
-import image from '../Assest/profpic3.jpg';
+import React from "react";
 
-const About = () => {
-  const [isGithubClicked, setIsGithubClicked] = useState(false);
-  const [isLinkedinClicked, setIsLinkedinClicked] = useState(false);
-
-  const handleGithubClick = (e) => {
-    e.preventDefault();
-    setIsGithubClicked(true);
-    setTimeout(() => {
-      setIsGithubClicked(false);
-      // Navigate to GitHub
-      window.open('https://github.com/codezshubham', '_blank');
-    }, 200); // Allow time for animation
-  };
-
-  const handleLinkedinClick = (e) => {
-    e.preventDefault();
-    setIsLinkedinClicked(true);
-    setTimeout(() => {
-      setIsLinkedinClicked(false);
-      // Navigate to LinkedIn
-      window.open('https://www.linkedin.com/in/shubhamkumar441/', '_blank');
-    }, 200); // Allow time for animation
-  };
-
+const AboutMe = () => {
   return (
-    <section className="bg-gray-900 text-gray-300 py-12 px-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center md:space-x-12">
-        {/* Profile Image */}
-        <div className="flex-shrink-0 mb-8 md:mb-0">
-          <img
-            src={image}
-            alt="Profile"
-            className="rounded-full opacity-100 w-80 h-80 object-cover border-4 border-gray-800"
-          />
-        </div>
-        {/* About Content */}
-        <div className="text-left">
-          <h1 className="text-3xl font-bold text-white mb-4">I am Shubham Kumar</h1>
-          <ul className="list-disc ml-5 space-y-2 mb-4">
-            <li>
-              Completing my graduation from BPMCE Madhepura with a Bachelor of Technology in Computer Science & Engineering.
-            </li>
-            <li>
-              Worked on various projects as a Full Stack Developer with a 60% backend and 40% frontend development bandwidth.
-            </li>
-            <li>
-              My portfolio boasts extensive expertise in data structures and algorithms, object-oriented programming,
-              functional programming, RESTful APIs, problem-solving prowess, proficient programming skills,
-              effective leadership qualities, effective communication skills and comprehensive software development proficiency.
-            </li>
-          </ul>
+    <section
+      id="about"
+      className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-300 py-20 px-6 overflow-hidden"
+    >
+      <div className="container mx-auto max-w-6xl relative z-10">
+        {/* Heading */}
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16">
+          About <span className="bg-gradient-to-r from-red-400 to-pink-600 bg-clip-text text-transparent">Me</span>
+        </h2>
 
-          {/* Technologies */}
-          <h3 className="text-lg text-white font-semibold mb-2">
-            My Preferred Tools and Technologies are <span className="emoji">👇</span>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <span className="text-red-400">✅</span>
-                <span>Java, Spring-Boot, Spring Data-JPA, Spring-Rest</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-red-400">✅</span>
-                <span>DS & Algo, Oops, Computer Networks</span>
-              </li>
-            </ul>
-            
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <span className="text-red-400">✅</span>
-                <span>Javascript, ReactJS, Redux-Toolkit, Tailwind CSS</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-red-400">✅</span>
-                <span>Git, Github, Maven, Postman, IntelliJ Idea</span>
-              </li>
-            </ul>
-
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <span className="text-red-400">✅</span>
-                <span>SQL, MySQL, MySQL Workbench Server</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-red-400">✅</span>
-                <span>AWS (EC2 instance & S3 bucket, Amplify)</span>
-              </li>
+        {/* Content */}
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          {/* Left Column - Text */}
+          <div className="space-y-6">
+            <p className="text-lg leading-relaxed text-gray-300">
+              I’m{" "}
+              <span className="font-bold text-red-400">Shubham Kumar</span>, an
+              aspiring{" "}
+              <span className="font-bold text-white">Full-Stack Developer</span>{" "}
+              currently pursuing my B.Tech in Computer Science & Engineering
+              from BPMCE Madhepura.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-400">
+              I have hands-on experience in developing projects using{" "}
+              <span className="font-semibold text-red-300">
+                Java, JavaScript, Spring Boot, React, Next.js
+              </span>
+              , and other modern frameworks. My strength lies in problem-solving,
+              designing scalable architectures, and building robust APIs.
+            </p>
+            <ul className="space-y-3 text-lg text-gray-300">
+              <li>📚 Strong in Data Structures & Algorithms.</li>
+              <li>💻 Built MERN & Java/Spring Boot projects.</li>
+              <li>☁️ Passionate about cloud technologies & deployment.</li>
+              <li>🎯 Goal: Build impactful apps & contribute to open source.</li>
             </ul>
           </div>
 
-
-          {/* Social Links with Animation */}
-          <div className="mt-6">
-            <a
-              href="https://github.com/codezshubham"
-              onClick={handleGithubClick}
-              className={`inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-200 px-4 py-2 rounded-md mr-4 ${
-                isGithubClicked ? 'transform scale-95' : 'transform scale-100'
-              }`}
-            >
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/shubhamkumar441/"
-              onClick={handleLinkedinClick}
-              className={`inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white font-bold hover:bg-gradient-to-l transition-all duration-200 px-4 py-2 rounded-md ${
-                isLinkedinClicked ? 'transform scale-95' : 'transform scale-100'
-              }`}
-            >
-              LinkedIn
-            </a>
+          {/* Right Column - Info Cards */}
+          <div className="grid grid-cols-2 gap-6">
+            {[
+              {
+                title: "Education",
+                highlight: "B.Tech CSE @ BPMCE Madhepura",
+                desc: "Expected 2026",
+              },
+              {
+                title: "Experience",
+                highlight: "Backend 60% | Frontend 40%",
+                desc: "Hackathons & projects",
+              },
+              {
+                title: "Skills",
+                highlight: "Java, Spring Boot, React, Next.js",
+                desc: "REST APIs, Git, MySQL",
+              },
+              {
+                title: "Goals",
+                highlight: "Cloud Dev + Gen AI",
+                desc: "Continuous learning 🚀",
+              },
+            ].map((card, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-gray-800/70 border border-gray-700 backdrop-blur-sm shadow-md hover:shadow-xl hover:border-red-400 transition duration-300"
+              >
+                <h3 className="text-xl font-semibold mb-2 text-red-400">
+                  {card.title}
+                </h3>
+                <p className="text-gray-200 font-medium">{card.highlight}</p>
+                <p className="text-sm text-gray-400 mt-1">{card.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* Glow Effect */}
+      <div className="absolute top-10 left-10 w-60 h-60 bg-red-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl"></div>
     </section>
   );
 };
 
-export default About;
+export default AboutMe;
