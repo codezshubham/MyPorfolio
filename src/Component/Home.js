@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FiCode } from "react-icons/fi";
 import { MdVerified, MdLocationOn } from "react-icons/md";
 import { HiDocumentArrowDown } from "react-icons/hi2";
 import { Typewriter } from "react-simple-typewriter";
-import image from "../Assest/profpic3.jpg";
+import image from "../Assest/ProfilePic.png";
 
 const HeroAboutSection = () => {
   return (
@@ -120,7 +121,7 @@ const HeroAboutSection = () => {
             </div>
             <div className="flex items-center gap-2 hover:text-pink-400 transition">
               <MdLocationOn className="text-pink-400 text-lg" />
-              <span>India</span>
+              <span>New Delhi, India</span>
             </div>
           </div>
 
@@ -150,14 +151,14 @@ const HeroAboutSection = () => {
           </div>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-6 pt-6">
-            <a
-              href="#projects"
+            <Link
+              to="/projects"
               className="flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-sky-400 text-black font-semibold shadow-lg hover:shadow-blue-500/50 hover:scale-105 transition-transform"
             >
               <FiCode size={20} /> My Work
-            </a>
+            </Link>
             <a
-              href="/Shubham_Kumar_Resume_Software_Engineer.pdf"
+              href="https://drive.google.com/file/d/1wdZKCimD-SPlPp31IpbctlagpLnQbp7y/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-8 py-4 rounded-xl bg-gray-800 text-white font-semibold shadow-lg hover:bg-gray-700 hover:scale-105 transition-transform"

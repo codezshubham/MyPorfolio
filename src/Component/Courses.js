@@ -54,9 +54,17 @@ const courses = [
     image: "/Python Essential 1.jpg",
   },
   {
+    title: "Linux Fundamentals",
+    provider: "Spoken Tutorial IIT Bombay",
+    date: "July 2024",
+    link: "https://drive.google.com/file/d/1MHRA5BR0w3wzPnYPamTyZ_QnSRj-YLTZ/view?usp=drivesdk",
+    image: "/Linux.png",
+  },
+  {
     title: "Soft Skill Development",
     provider: "NPTEL",
     date: "Jan 2025",
+    link: "https://drive.google.com/file/d/1sGLFYp-P-L83ocd4u_HDyhRSK-27IP2r/view?usp=drivesdk",
     image: "/Soft Skill Development.jpg",
   },
 ];

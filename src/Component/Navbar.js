@@ -1,93 +1,110 @@
 import React, { useState } from "react";
-import image from "../Assest/profpic3.jpg";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import image from "../Assest/ProfilePic.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const location = useLocation();
 
   const links = [
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Experiences", href: "#experience" },
-    { name: "Coding", href: "#coding" },
-    { name: "Projects", href: "#projects" },
-    { name: "Certifications", href: "#certifications" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", to: "/#about" },
+    { name: "Skills", to: "/#skills" },
+    { name: "Experiences", to: "/#experience" },
+    { name: "Coding", to: "/codingProfile" },
+    { name: "Projects", to: "/projects" },
+    { name: "Certifications", to: "/certifications" },
+    { name: "Contact", to: "/#contact" },
   ];
 
+  const isActive = (path) => {
+    const [pathname, hash] = path.split("#");
+
+    // Route match for normal pages
+    if (!hash) {
+      return location.pathname === pathname;
+    }
+
+    // Hash route match for sections like /#about
+    return (
+      location.pathname === pathname && window.location.hash === `#${hash}`
+    );
+  };
+
   return (
-    <nav className="bg-gray-950 sticky top-0 z-50 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center px-6 py-3">
-        {/* Profile Image */}
-        <img
-          src={image}
-          alt="Profile"
-          className="w-11 h-11 rounded-full border border-pink-500 shadow-md hover:scale-105 transition-transform"
-        />
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        {/* Logo / Profile */}
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="relative">
+            <img
+              src={image}
+              alt="Profile"
+              className="h-11 w-11 rounded-full border border-pink-500/70 object-cover shadow-lg transition duration-300 group-hover:scale-105"
+            />
+            <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-slate-950 bg-emerald-400" />
+          </div>
+          <div className="hidden sm:block">
+            <p className="text-sm font-semibold text-white">Portfolio</p>
+            <p className="text-xs text-slate-400">Software Developer</p>
+          </div>
+        </Link>
 
-        {/* Desktop Links */}
-        <ul className="hidden md:flex items-center space-x-8 text-gray-300 text-lg font-medium">
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2 py-2 shadow-2xl">
           {links.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                className="relative hover:text-white transition"
-              >
-                {link.name}
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-300 hover:text-white transition"
-          onClick={toggleMenu}
-        >
-          <svg
-            className="w-7 h-7"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-lg shadow-lg absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center space-y-8 text-lg text-gray-200">
-          <button
-            className="absolute top-6 right-6 text-gray-300 hover:text-white"
-            onClick={toggleMenu}
-          >
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          {links.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
-              onClick={toggleMenu}
-              className="hover:text-pink-400 transition"
+              to={link.to}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                isActive(link.to)
+                  ? "bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow-lg"
+                  : "text-slate-300 hover:bg-white/10 hover:text-white hover:backdrop-blur-md"
+              }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
-      )}
-    </nav>
+
+        {/* CTA + Mobile Toggle */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden rounded-xl border border-white/10 bg-white/5 p-2 text-slate-200 transition hover:bg-white/10"
+          >
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Drawer */}
+      <div
+        className={[
+          "md:hidden absolute left-0 right-0 top-full",
+          "border-t border-white/10 bg-slate-950/95 backdrop-blur-xl",
+          "transition-all duration-200",
+          isOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-2 pointer-events-none",
+        ].join(" ")}
+      >
+        <div className="px-4 py-4">
+          <div className="space-y-2 rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
 

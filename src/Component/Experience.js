@@ -4,20 +4,20 @@ const experiences = [
   {
     title: "Salesforce Developer Intern",
     company: "Salesforce",
-    duration: "Jan 2023 to Feb 2023",
+    duration: "Dec 2023 to Jan 2024",
     description: [
-      "Developed custom applications using Salesforce Lightning, Apex, and Visualforce, and integrated third-party APIs to extend platform functionality.",
-      "Automated business workflows and optimized data integrity through Apex Triggers, Validation Rules, and SOQL queries, enhancing business process efficiency.",
-      "Collaborated with cross-functional teams to implement new CRM features, troubleshoot production issues, and improve data analysis with Reports and Dashboards."
+      "Built a centralized platform to manage domain credentials, access, and renewal charges using React and Tailwind CSS.",
+      "Implemented JWT-based login, role access control, and encrypted MySQL storage with Spring Boot.",
+      "Automated email reminders for renewals using Java and Spring Scheduler."
     ],
     skills: [
-      "Salesforce Lightning",
-      "Apex",
-      "Visualforce",
-      "SOQL",
-      "JavaScript",
-      "HTML/CSS",
-      "REST API"
+      "React",
+      "Tailwind CSS",
+      "Spring Boot",
+      "JWT Auth",
+      "MySQL",
+      "Java",
+      "Spring Scheduler"
     ],
     certificate: {
       label: "View Certificate",
@@ -29,24 +29,44 @@ const experiences = [
     company: "Aagaaz Training Centre, Patna",
     duration: "Jun 2025",
     description: [
-      "Built a centralized platform to manage domain credentials, access, and renewal charges using React and Tailwind CSS.",
-      "Implemented JWT-based login, role access control, and encrypted MySQL storage with Spring Boot.",
-      "Automated email reminders for renewals using Java and Spring Scheduler."
+      "Developed an interactive PDF Question & Answer chatbot using Groq LLM, LangChain, and Streamlit.",
+      "Enabled users to upload PDF documents and ask questions in natural language, returning accurate answers via Retrieval-Augmented Generation (RAG).",
+      "Implemented session-based conversational memory to support follow-up questions and multi-turn context."
     ],
     skills: [
-      "React",
-      "Tailwind CSS",
-      "JWT Auth",
-      "Spring Boot",
-      "MySQL",
-      "Java",
-      "Spring Scheduler",
-      "REST API"
+      "Groq LLM",
+      "LangChain",
+      "Streamlit",
+      "Retrieval-Augmented Generation (RAG)",
+      "Conversational Memory",
+      "Vector Search",
+      "PDF Processing",
+      "Python"
     ],
     certificate: {
       label: "View Certificate",
       file: "/AagaazCertificate.pdf"
     }
+  },
+  {
+    title: "Web Dev Lead",
+    company: "Google Developer Groups (GDG)",
+    duration: "Sep 2025 - Present",
+    description: [
+      "Led and coordinated the Web Development team, planning learning tracks and weekly goals.",
+      "Organized hands-on workshops/sessions on frontend fundamentals and modern React development.",
+      "Mentored members through mini-projects, reviewed code, and helped standardize best practices for team projects."
+    ],
+    skills: [
+      "Leadership",
+      "Community Building",
+      "Workshop Facilitation",
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Team Collaboration",
+      "Project Planning"
+    ]
   }
 ];
 
@@ -126,17 +146,19 @@ const Experience = () => {
                   </div>
 
                   {/* Certificate Button */}
-                  <div>
-                    <a
-                      href={exp.certificate.file}
-                      onClick={(e) => handleCertificateClick(e, idx, exp.certificate.file)}
-                      className={`inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-sky-400 text-black font-semibold text-sm px-4 py-2 rounded-lg shadow-md transition-transform duration-300 ${clickedIdx === idx ? "transform scale-95" : "transform scale-100"
-                        }`}
-                    >
-                      <FaExternalLinkAlt className="text-sm" /> {exp.certificate.label}
-                    </a>
+                  {exp.certificate && (
+                    <div>
+                      <a
+                        href={exp.certificate.file}
+                        onClick={(e) => handleCertificateClick(e, idx, exp.certificate.file)}
+                        className={`inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-sky-400 text-black font-semibold text-sm px-4 py-2 rounded-lg shadow-md transition-transform duration-300 ${clickedIdx === idx ? "transform scale-95" : "transform scale-100"
+                          }`}
+                      >
+                        <FaExternalLinkAlt className="text-sm" /> {exp.certificate.label}
+                      </a>
 
-                  </div>
+                    </div>
+                  )}
                 </div>
               </div>
             );

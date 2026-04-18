@@ -2,6 +2,9 @@ import React from "react";
 import { FaCalendarDay, FaFire, FaMedal } from "react-icons/fa";
 import { MdOutlineLeaderboard } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
+import badge50Days2024 from "../Assest/50Days2024.png";
+import badge50Days2025 from "../Assest/50Days2025.png";
+import badge100Days2025 from "../Assest/100Days2025.png";
 
 export default function LeetCodeJourney() {
   return (
@@ -25,6 +28,27 @@ export default function LeetCodeJourney() {
           <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
             Consistent problem solving, algorithmic thinking, and coding challenges that shaped my developer journey.
           </p>
+
+          {/* LeetCode badges */}
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {[
+              { src: badge50Days2024, alt: "LeetCode 50 Days badge (2024)" },
+              { src: badge50Days2025, alt: "LeetCode 50 Days badge (2025)" },
+              { src: badge100Days2025, alt: "LeetCode 100 Days badge (2025)" },
+            ].map((badge) => (
+              <div
+                key={badge.alt}
+                className="bg-gray-800/60 border border-gray-700 rounded-2xl p-4 shadow-lg"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  className="w-full h-auto rounded-xl"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Grid */}
@@ -34,13 +58,13 @@ export default function LeetCodeJourney() {
             <StatCard
               icon={<SiLeetcode className="text-yellow-400 text-2xl" />}
               label="Problems Solved"
-              value="380+ / 3677"
+              value="400 / 3902"
               progress={35}
             />
             <StatCard
               icon={<MdOutlineLeaderboard className="text-purple-400 text-2xl" />}
               label="Contest Rating"
-              value="1412"
+              value="1505"
             />
             <StatCard
               icon={<FaFire className="text-red-400 text-2xl" />}
@@ -67,7 +91,7 @@ export default function LeetCodeJourney() {
                 Problem Difficulty Breakdown
               </h3>
               <ProgressRow label="Easy" value={90} max={900} color="bg-green-400" />
-              <ProgressRow label="Medium" value={250} max={1915} color="bg-yellow-400" />
+              <ProgressRow label="Medium" value={280} max={1915} color="bg-yellow-400" />
               <ProgressRow label="Hard" value={50} max={900} color="bg-red-400" />
             </div>
 
@@ -79,8 +103,8 @@ export default function LeetCodeJourney() {
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>🏆 Monthly Challenge Badge - Sept 2025</li>
                 <li>⚡ 50-Day Streak Achievement</li>
-                <li>🥇 Contest Rating 1400+ Milestone</li>
-                <li>📘 380+ Problems Solved</li>
+                <li>🥇 Contest Rating 1505 Milestone</li>
+                <li>📘 400+ Problems Solved</li>
               </ul>
             </div>
 

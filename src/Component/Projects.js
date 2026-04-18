@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 // Import all project images
-import projectImg from '../Assest/Project.png';
-import dashhostImg from '../Assest/Screenshot 2025-05-18 201528.png';
-import hotelManageImg from '../Assest/Screenshot 2025-05-19 163206.png';
-import youtubeCloneImg from '../Assest/Screenshot 2025-05-19 164928.png';
-import resumeRenderImg from '../Assest/Screenshot 2025-06-30 185058.png';
-import currentProjectImg from '../Assest/Screenshot 2025-05-02 202906.png';
-import lan2sqlImg from '../Assest/Screenshot 2025-08-29 182350.png';
+import echoEcomImg from '../Assest/Echoecom.png';
+import dashhostImg from '../Assest/DashHost.png';
+import hotelManageImg from '../Assest/InnManage.png';
+import youtubeCloneImg from '../Assest/VidTube.png';
+import resumeRenderImg from '../Assest/ResumeRender.png';
+import AcadElevateImg from '../Assest/AcadElevate.png';
+import lan2sqlImg from '../Assest/Lang2SQL.png';
+import docProofImg from '../Assest/DocProof.png';
+import healthChainImg from '../Assest/HealthChain.png';
 
 // Project data
 const projects = [
   {
     title: "Automated Faculty Appraisal System",
-    image: currentProjectImg,
+    image: AcadElevateImg,
     status: "Working",
     statusColor: "bg-yellow-500",
     url: "https://acad-elevate.vercel.app/",
@@ -24,6 +26,20 @@ const projects = [
       "Integrated an admin panel with performance analytics, including charts, graphs, and a leaderboard."
     ],
     tech: ["HTML", "Tailwind CSS", "Javascript", "React", "Java", "SpringBoot", "MySQL"]
+  },
+  {
+    title: "Blockchain-Based AI Healthcare Record System",
+    image: healthChainImg,
+    status: "Completed",
+    statusColor: "bg-red-500",
+    url: "https://healthchain.com",
+    urlLabel: "HealthChain.com",
+    github: "https://github.com/codezshubham/HealthChain",
+    description: [
+      "Built a blockchain-backed EHR platform with role-based access (patient/doctor/government) for secure medical record management and auditability.",
+      "Integrated IPFS (Pinata) for decentralized report storage, anchored IPFS hashes on Ethereum via smart contracts (Hardhat/ethers), and used an LLM assistant to generate patient guidance from medical history."
+    ],
+    tech: ["Next.js", "Express.js", "MongoDB", "Ethereum", "IPFS", "LLM", "RAG", "SHA-256", "Blockchain"]
   },
   {
     title: "ResumeRender – ATS-Friendly Resume Builder",
@@ -43,8 +59,8 @@ const projects = [
   {
     title: "Lan2SQL - Database AI Agent",
     image: lan2sqlImg,
-    status: "Working",
-    statusColor: "bg-yellow-500",
+    status: "Completed",
+    statusColor: "bg-red-500",
     url: "https://database-agent-coral.vercel.app/",
     urlLabel: "Lan2SQL.com",
     github: "https://github.com/codezshubham/DatabaseAgentF",
@@ -70,8 +86,23 @@ const projects = [
     tech: ["HTML", "Tailwind CSS", "React", "Javascript", "Spring Boot", "MySQL", "JavaMailSender", "Redux Toolkit"]
   },
   {
+    title: "Blockchain-Based AI E-Notary System",
+    image: docProofImg,
+    status: "Completed",
+    statusColor: "bg-red-500",
+    url: "https://docproof.com",
+    urlLabel: "DocProof.com",
+    github: "https://github.com/codezshubham/blockchain-e-notary",
+    description: [
+      "Jan 2026 – Mar 2026",
+      "Built a decentralized E-Notary platform to verify document authenticity using blockchain and SHA-256 hashing.",
+      "Integrated IPFS for decentralized file storage and an AI-powered RAG system for document querying and insights."
+    ],
+    tech: ["Next.js", "Express.js", "Ethereum", "IPFS", "LLM", "RAG", "SHA-256", "Blockchain"]
+  },
+  {
     title: "E-commerce Web Application",
-    image: projectImg,
+    image: echoEcomImg,
     status: "Completed",
     statusColor: "bg-red-500",
     url: "https://codezshubhamechoecom.vercel.app",
@@ -188,24 +219,28 @@ const Project = () => {
                 {/* Buttons */}
                 <div className="flex gap-3 mt-auto">
                   {/* Live Demo */}
-                  <a
-                    href={proj.url}
-                    onClick={(e) => handleProjectLinkClick(e, proj.url, idx)}
-                    className={`flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-sky-400 text-black font-semibold px-4 py-2 rounded-xl shadow-lg transition-transform duration-300 ${clickedIndex === idx ? "scale-95" : "hover:scale-105"
-                      }`}
-                  >
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
+                  {proj.url && (
+                    <a
+                      href={proj.url}
+                      onClick={(e) => handleProjectLinkClick(e, proj.url, idx)}
+                      className={`flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-sky-400 text-black font-semibold px-4 py-2 rounded-xl shadow-lg transition-transform duration-300 ${clickedIndex === idx ? "scale-95" : "hover:scale-105"
+                        }`}
+                    >
+                      <FaExternalLinkAlt /> Live Demo
+                    </a>
+                  )}
 
                   {/* GitHub */}
-                  <a
-                    href={proj.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 bg-gray-800/60 hover:bg-gray-700 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
-                  >
-                    <FaGithub /> GitHub
-                  </a>
+                  {proj.github && (
+                    <a
+                      href={proj.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 bg-gray-800/60 hover:bg-gray-700 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+                    >
+                      <FaGithub /> GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

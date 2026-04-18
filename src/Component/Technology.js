@@ -16,6 +16,7 @@ const skills = [
     color: "from-pink-500 to-pink-700",
     items: [
       { name: "ReactJS", level: "Projects", proficiency: 85 },
+      { name: "Next.js", level: "Projects", proficiency: 70 },
       { name: "HTML5", level: "Academic", proficiency: 90 },
       { name: "CSS3", level: "Academic", proficiency: 75 },
     ],
