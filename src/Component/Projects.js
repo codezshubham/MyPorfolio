@@ -127,7 +127,6 @@ export const projects = [
   },
   {
     title: "Database AI Agent",
-    description: "A full-stack database assistant that combines AI-powered natural language processing with a modern web interface.",
     image: lan2sqlImg,
     status: "Completed",
     statusColor: "bg-red-500",
