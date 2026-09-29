@@ -73,17 +73,13 @@ export default function CoursesCards() {
   return (
     <section
       id="certifications"
-      className="relative px-6 py-20 bg-gray-950 overflow-hidden"
+      className="section-surface relative px-6 py-24 bg-black overflow-hidden"
     >
-      {/* Background glow orbs */}
-      <div className="absolute top-0 -left-20 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 -right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center 
+        <h2 className="section-heading text-4xl md:text-5xl font-extrabold mb-12 text-center 
                bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-sky-500 to-blue-600 
                drop-shadow-lg">
-          Courses & Certifications
+          Courses & <span className="section-heading-highlight">Certifications</span>
         </h2>
 
 

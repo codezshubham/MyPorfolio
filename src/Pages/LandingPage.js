@@ -6,10 +6,12 @@ import Contact from '../Component/Contact';
 import Technology from '../Component/Technology';
 import Experience from '../Component/Experience';
 import Education from '../Component/Education';
+import CodingProfile from '../Component/CodingProfile';
+import Projects from '../Component/Projects';
 
 export default function LandingPage() {
   return (
-    <div className="bg-gray-900 flex flex-col justify-center ">
+    <div className="landing-page flex flex-col justify-center">
       <section id="home">
         <Home />
       </section>
@@ -26,7 +28,8 @@ export default function LandingPage() {
         <Experience />
       </section>
 
-      {/* Coding profile moved to /codingProfile */}
+      <CodingProfile />
+      <Projects />
 
       <section id="contact">
         <Contact />
